@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://timewzp.gitee.io</id>
+    <id>https://twizmpe.github.io/</id>
     <title>twizmpe</title>
-    <updated>2020-07-02T07:13:18.431Z</updated>
+    <updated>2020-07-02T07:14:45.870Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://timewzp.gitee.io"/>
-    <link rel="self" href="https://timewzp.gitee.io/atom.xml"/>
+    <link rel="alternate" href="https://twizmpe.github.io/"/>
+    <link rel="self" href="https://twizmpe.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://timewzp.gitee.io/images/avatar.png</logo>
-    <icon>https://timewzp.gitee.io/favicon.ico</icon>
+    <logo>https://twizmpe.github.io/images/avatar.png</logo>
+    <icon>https://twizmpe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, twizmpe</rights>
 </feed>
