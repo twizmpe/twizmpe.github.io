@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twizmpe.github.io</id>
     <title>twizmpe</title>
-    <updated>2020-07-02T07:32:58.237Z</updated>
+    <updated>2020-07-02T09:55:24.044Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twizmpe.github.io"/>
     <link rel="self" href="https://twizmpe.github.io/atom.xml"/>
@@ -10,4 +10,13 @@
     <logo>https://twizmpe.github.io/images/avatar.png</logo>
     <icon>https://twizmpe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, twizmpe</rights>
+    <entry>
+        <title type="html"><![CDATA[jeeSite4 Common]]></title>
+        <id>https://twizmpe.github.io/post/jeesite4-common/</id>
+        <link href="https://twizmpe.github.io/post/jeesite4-common/">
+        </link>
+        <updated>2020-07-02T09:51:59.000Z</updated>
+        <content type="html"><![CDATA[<p>1</p>
+]]></content>
+    </entry>
 </feed>
