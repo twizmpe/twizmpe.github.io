@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>jeeSite4 Common包 | twizmpe</title>
-<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593684022621">
+<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593692294318">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="jeeSite4 Common包 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
@@ -11,8 +11,11 @@
 
 
 
-    <meta name="description" content="编解码包
-" />
+    <meta name="description" content="编解码
+AES,Advanced Encryption Standard加密算法
+AES简介
+
+AES(Advanced Encryption Standard)基于Rijndael加密法，通过AES加密函数，使用明文和密钥生成密码。严格地..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -22,7 +25,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://twizmpe.github.io">
-  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593684022621" alt="">
+  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593692294318" alt="">
   </a>
   <h1 class="site-title">
     twizmpe
@@ -86,21 +89,42 @@
                 2020-07-02
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="编解码包">编解码包</h2>
+                <h2 id="编解码">编解码</h2>
+<h3 id="aesadvanced-encryption-standard加密算法">AES,Advanced Encryption Standard加密算法</h3>
+<h4 id="aes简介">AES简介</h4>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86">AES</a>(Advanced Encryption Standard)基于Rijndael加密法，通过AES加密函数，使用明文和密钥生成密码。严格地说，AES和Rijndael加密法并不完全一样（虽然在实际应用中两者可以互换），因为Rijndael加密法可以支持更大范围的区块和密钥长度：AES的区块长度固定为128比特，密钥长度则可以是128，192或256比特；而Rijndael使用的密钥和区块长度均可以是128，192或256比特。加密过程中使用的密钥是由Rijndael密钥生成方案产生。</li>
+<li>AES加密过程是在一个4×4的字节矩阵上运作，经过多轮AES加密，每轮AES加密分为四个步骤：
+<ul>
+<li>AddRoundKey—矩阵中的每一个字节都与该次回合密钥（round key）做XOR运算；每个子密钥由密钥生成方案产生。</li>
+<li>SubBytes—透过一个非线性的替换函数，用查找表的方式把每个字节替换成对应的字节。</li>
+<li>ShiftRows—将矩阵中的每个横列进行循环式移位。</li>
+<li>MixColumns—为了充分混合矩阵中各个直行的操作。这个步骤使用线性转换来混合每内联的四个字节。最后一个加密循环中省略MixColumns步骤，而以另一个AddRoundKey取代。</li>
+</ul>
+</li>
+</ul>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%BC%96%E8%A7%A3%E7%A0%81%E5%8C%85">编解码包</a></li>
+<li><a href="#%E7%BC%96%E8%A7%A3%E7%A0%81">编解码</a>
+<ul>
+<li><a href="#aesadvanced-encryption-standard%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95">AES,Advanced Encryption Standard加密算法</a>
+<ul>
+<li><a href="#aes%E7%AE%80%E4%BB%8B">AES简介</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
