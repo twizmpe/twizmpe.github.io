@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>jeeSite4 Common包 | twizmpe</title>
-<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593692294318">
+<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593694449823">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="jeeSite4 Common包 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
@@ -11,11 +11,15 @@
 
 
 
-    <meta name="description" content="编解码
-AES,Advanced Encryption Standard加密算法
-AES简介
+    <meta name="description" content="编解码包
+主要工具类
 
-AES(Advanced Encryption Standard)基于Rijndael加密法，通过AES加密函数，使用明文和密钥生成密码。严格地..." />
+EncodeUtils类包含
+
+1.Commons-Codec的 hex/base64 编码
+2.自制的base62 编码
+3.Commons-Lang的xml/html escape
+4.JDK提供的URLEnco..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -25,7 +29,7 @@ AES(Advanced Encryption Standard)基于Rijndael加密法，通过AES加密函数
       <div class="main-content">
         <div class="site-header">
   <a href="https://twizmpe.github.io">
-  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593692294318" alt="">
+  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593694449823" alt="">
   </a>
   <h1 class="site-title">
     twizmpe
@@ -89,15 +93,27 @@ AES(Advanced Encryption Standard)基于Rijndael加密法，通过AES加密函数
                 2020-07-02
               </span>
               <span>
-                2 min read
+                3 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="编解码">编解码</h2>
-<h3 id="aesadvanced-encryption-standard加密算法">AES,Advanced Encryption Standard加密算法</h3>
+                <h2 id="编解码包">编解码包</h2>
+<h3 id="主要工具类">主要工具类</h3>
+<ul>
+<li><code>EncodeUtils</code>类包含
+<ul>
+<li>1.<code>Commons-Codec</code>的 hex/base64 编码</li>
+<li>2.自制的base62 编码</li>
+<li>3.<code>Commons-Lang</code>的xml/html escape</li>
+<li>4.JDK提供的URLEncoder</li>
+<li>5.XSS 非法字符过滤</li>
+<li>6.SQL过滤</li>
+</ul>
+</li>
+</ul>
 <h4 id="aes简介">AES简介</h4>
 <ul>
 <li><a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86">AES</a>(Advanced Encryption Standard)基于Rijndael加密法，通过AES加密函数，使用明文和密钥生成密码。严格地说，AES和Rijndael加密法并不完全一样（虽然在实际应用中两者可以互换），因为Rijndael加密法可以支持更大范围的区块和密钥长度：AES的区块长度固定为128比特，密钥长度则可以是128，192或256比特；而Rijndael使用的密钥和区块长度均可以是128，192或256比特。加密过程中使用的密钥是由Rijndael密钥生成方案产生。</li>
@@ -110,17 +126,44 @@ AES(Advanced Encryption Standard)基于Rijndael加密法，通过AES加密函数
 </ul>
 </li>
 </ul>
+<h4 id="base64">BASE64</h4>
+<p>*<a href="https://zh.wikipedia.org/wiki/Base64">BASE64</a>是一种基于64个可打印字符来表示二进制数据的表示方法。每6个比特为一个单元，对应某个可打印字符。3个字节相当于24个比特，对应于4个Base64单元，即3个字节可由4个可打印字符来表示。它可用来作为电子邮件的传输编码。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。</p>
+<h4 id="hex">HEX</h4>
+<ul>
+<li>16进制编解码</li>
+</ul>
+<h4 id="xss">XSS</h4>
+<ul>
+<li>跨站脚本（英语：Cross-site scripting，通常简称为：XSS）是一种网站应用程序的安全漏洞攻击，是代码注入的一种。它允许恶意用户将代码注入到网页上，其他用户在观看网页时就会受到影响。这类攻击通常包含了HTML以及用户端脚本语言。</li>
+<li>攻击手段和谜底
+<ul>
+<li>盗用cookie，获取敏感信息。</li>
+<li>利用植入Flash，通过crossdomain权限设置进一步获取更高权限；或者利用Java等得到类似的操作。</li>
+<li>利用iframe、frame、XMLHttpRequest或上述Flash等方式，以（被攻击）用户的身份执行一些管理动作，或执行一些一般的如发微博、加好友、发私信等操作。</li>
+<li>利用可被攻击的域受到其他域信任的特点，以受信任来源的身份请求一些平时不允许的操作，如进行不当的投票活动。</li>
+<li>在访问量极大的一些页面上的XSS可以攻击一些小型网站，实现DoS攻击的效果。</li>
+</ul>
+</li>
+</ul>
+<h5 id="如何防止xss美团">如何防止XSS（<a href="https://tech.meituan.com/2018/09/27/fe-security.html">美团</a>）</h5>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%BC%96%E8%A7%A3%E7%A0%81">编解码</a>
+<li><a href="#%E7%BC%96%E8%A7%A3%E7%A0%81%E5%8C%85">编解码包</a>
 <ul>
-<li><a href="#aesadvanced-encryption-standard%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95">AES,Advanced Encryption Standard加密算法</a>
+<li><a href="#%E4%B8%BB%E8%A6%81%E5%B7%A5%E5%85%B7%E7%B1%BB">主要工具类</a>
 <ul>
 <li><a href="#aes%E7%AE%80%E4%BB%8B">AES简介</a></li>
+<li><a href="#base64">BASE64</a></li>
+<li><a href="#hex">HEX</a></li>
+<li><a href="#xss">XSS</a>
+<ul>
+<li><a href="#%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2xss%E7%BE%8E%E5%9B%A2">如何防止XSS（美团）</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
