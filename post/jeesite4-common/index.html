@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>jeeSite4 Common包 | twizmpe</title>
-<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593741732011">
+<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593744417950">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="jeeSite4 Common包 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
@@ -29,7 +29,7 @@ EncodeUtils类包含
       <div class="main-content">
         <div class="site-header">
   <a href="https://twizmpe.github.io">
-  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593741732011" alt="">
+  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593744417950" alt="">
   </a>
   <h1 class="site-title">
     twizmpe
@@ -87,7 +87,7 @@ EncodeUtils类包含
                 2020-07-02
               </span>
               <span>
-                5 min read
+                6 min read
               </span>
               
                 <a href="https://twizmpe.github.io/tag/n2l7XxIuj/" class="post-tag">
@@ -177,6 +177,42 @@ EncodeUtils类包含
 DOM 型 XSS 跟前两种 XSS 的区别：DOM 型 XSS 攻击中，取出和执行恶意代码由浏览器端完成，属于前端 JavaScript 自身的安全漏洞，而其他两种 XSS 都属于服务端的安全漏洞。</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>XSS预防
+<ul>
+<li>输入过滤
+<ul>
+<li>防止 HTML 中出现注入。</li>
+<li>防止 JavaScript 执行时，执行恶意代码。</li>
+</ul>
+</li>
+<li>存储型和反射型 XSS 攻击
+<ul>
+<li>纯前端渲染</li>
+<li>HTML转义</li>
+</ul>
+</li>
+<li>DOM 型 XSS 攻击
+<ul>
+<li>在使用 .innerHTML、.outerHTML、document.write() 时要特别小心，不要把不可信的数据作为 HTML 插到页面上，而应尽量使用 .textContent、.setAttribute() 等。</li>
+</ul>
+</li>
+<li>常用准则
+<ul>
+<li>禁止加载外域代码，防止复杂的攻击逻辑。</li>
+<li>禁止外域提交，网站被攻击后，用户的数据不会泄露到外域。</li>
+<li>禁止内联脚本执行（规则较严格，目前发现 GitHub 使用）。</li>
+<li>禁止未授权的脚本执行（新特性，Google Map 移动版在使用）。</li>
+<li>合理使用上报可以及时发现 XSS，利于尽快修复问题。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实际的解决方法
+<ul>
+<li>1.使用<code>org.apache.commons.text.StringEscapeUtils</code>工具类对<code>xml</code>以及<code>HTML</code>进行转义编解码，对特殊字符如&lt;&gt;&quot; ' &amp; 转义。</li>
+<li>2.使用设计的<code>xssFilter</code>进行过滤。</li>
 </ul>
 </li>
 </ul>
