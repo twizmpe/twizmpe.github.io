@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>JAVA学习 | twizmpe</title>
-<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593777630349">
+<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593779523927">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="JAVA学习 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
@@ -12,7 +12,8 @@
 
 
     <meta name="description" content="泛型
-" />
+
+即‘参数化类型’，java虚拟机在编译阶段进行去泛型化，在编译过程中，正确检验泛型结果后，会将泛型的相关信息擦出，并且在对象进入和离开方法的边界处添加类型检查和类型转换的方法。因此只要在编译时期不存在类型转换问题，那么运行时期就不会..." />
     <meta name="keywords" content="基础知识" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -22,7 +23,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://twizmpe.github.io">
-  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593777630349" alt="">
+  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593779523927" alt="">
   </a>
   <h1 class="site-title">
     twizmpe
@@ -94,6 +95,32 @@
             <div class="post-content-wrapper">
               <div class="post-content">
                 <h2 id="泛型">泛型</h2>
+<ul>
+<li>即‘参数化类型’，java虚拟机在编译阶段进行去泛型化，在编译过程中，正确检验泛型结果后，会将泛型的相关信息擦出，并且在对象进入和离开方法的边界处添加类型检查和类型转换的方法。因此只要在编译时期不存在类型转换问题，那么运行时期就不会抛出ClassCastException异常。</li>
+<li>泛型包含知识点
+<ul>
+<li>泛型类</li>
+<li>泛型方法</li>
+<li>类型通配符<code>?</code>
+<ul>
+<li>能调对象与类型无关的方法，不能调用对象与类型有关的方法。</li>
+<li>设置通配符上限<code>&lt;? extends T&gt;</code>、设置通配符下限<code>&lt;? super T&gt;</code>。</li>
+<li>上下限原则PECS(Producer Extends Consumer Super)
+<ul>
+<li>泛型读取<code>&lt;? extends T&gt;</code>--------&gt;Producer Extends</li>
+<li>泛型写入<code>&lt;? super T&gt;</code>--------&gt;Consumer Super</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>泛型擦除
+<ul>
+<li>java虚拟机在编译阶段进行去泛型化。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
               </div>
               <div class="toc-container">
