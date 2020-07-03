@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twizmpe.github.io</id>
     <title>twizmpe</title>
-    <updated>2020-07-03T02:47:03.634Z</updated>
+    <updated>2020-07-03T03:13:58.858Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twizmpe.github.io"/>
     <link rel="self" href="https://twizmpe.github.io/atom.xml"/>
@@ -41,6 +41,10 @@
 <li>MixColumns—为了充分混合矩阵中各个直行的操作。这个步骤使用线性转换来混合每内联的四个字节。最后一个加密循环中省略MixColumns步骤，而以另一个AddRoundKey取代。</li>
 </ul>
 </li>
+</ul>
+<h4 id="des加密算法">DES加密算法</h4>
+<ul>
+<li>数据加密标准（英语：Data Encryption Standard，缩写为 <a href="https://zh.wikipedia.org/wiki/%E8%B3%87%E6%96%99%E5%8A%A0%E5%AF%86%E6%A8%99%E6%BA%96">DES</a>）是一种对称密钥加密块密码算法，1976年被美国联邦政府的国家标准局确定为联邦资料处理标准（FIPS），随后在国际上广泛流传开来。它基于使用56位密钥的对称算法。这个算法因为包含一些机密设计元素，相对短的密钥长度以及怀疑内含美国国家安全局（NSA）的后门而在开始时有争议，DES因此受到了强烈的学院派式的审查，并以此推动了现代的块密码及其密码分析的发展。DES现在已经不是一种安全的加密方法，主要因为它使用的56位密钥过短。</li>
 </ul>
 <h4 id="base64">BASE64</h4>
 <p>*<a href="https://zh.wikipedia.org/wiki/Base64">BASE64</a>是一种基于64个可打印字符来表示二进制数据的表示方法。每6个比特为一个单元，对应某个可打印字符。3个字节相当于24个比特，对应于4个Base64单元，即3个字节可由4个可打印字符来表示。它可用来作为电子邮件的传输编码。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。</p>
@@ -128,7 +132,8 @@ DOM 型 XSS 跟前两种 XSS 的区别：DOM 型 XSS 攻击中，取出和执行
 <li>实际的解决方法
 <ul>
 <li>1.使用<code>org.apache.commons.text.StringEscapeUtils</code>工具类对<code>xml</code>以及<code>HTML</code>进行转义编解码，对特殊字符如&lt;&gt;&quot; ' &amp; 转义。</li>
-<li>2.使用设计的<code>xssFilter</code>进行过滤。</li>
+<li>2.使用设计的<code>xssFilter</code>过滤关键词。</li>
+<li>3.使用设计的<code>sqlFilter</code>过滤<code>SQL</code>关键词。</li>
 </ul>
 </li>
 </ul>
