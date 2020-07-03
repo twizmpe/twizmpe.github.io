@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twizmpe.github.io</id>
     <title>twizmpe</title>
-    <updated>2020-07-03T06:28:32.433Z</updated>
+    <updated>2020-07-03T06:39:09.462Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twizmpe.github.io"/>
     <link rel="self" href="https://twizmpe.github.io/atom.xml"/>
@@ -11,7 +11,19 @@
     <icon>https://twizmpe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, twizmpe</rights>
     <entry>
-        <title type="html"><![CDATA[jeeSite4 编解码]]></title>
+        <title type="html"><![CDATA[JeeSite4]]></title>
+        <id>https://twizmpe.github.io/post/jeesite4/</id>
+        <link href="https://twizmpe.github.io/post/jeesite4/">
+        </link>
+        <updated>2020-07-03T06:37:51.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="suppresswarningsrawtypes">@SuppressWarnings(&quot;rawtypes&quot;)</h3>
+<ul>
+<li>传参时也要传递带泛型的参数警告去除</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JeeSite4 编解码]]></title>
         <id>https://twizmpe.github.io/post/jeesite4-common/</id>
         <link href="https://twizmpe.github.io/post/jeesite4-common/">
         </link>
