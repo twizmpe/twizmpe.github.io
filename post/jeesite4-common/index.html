@@ -2,24 +2,24 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>jeeSite4 Common包 | twizmpe</title>
-<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593757242279">
+<title>jeeSite4 编解码 | twizmpe</title>
+<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593757709153">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="jeeSite4 Common包 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="jeeSite4 编解码 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="编解码包
-主要工具类
+    <meta name="description" content="主要工具类
 
 EncodeUtils类包含
 
 1.Commons-Codec的 hex/base64 编码
 2.自制的base62 编码
 3.Commons-Lang的xml/html escape
-4.JDK提供的URLEnco..." />
+4.JDK提供的URLEncoder
+5..." />
     <meta name="keywords" content="项目学习" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -29,7 +29,7 @@ EncodeUtils类包含
       <div class="main-content">
         <div class="site-header">
   <a href="https://twizmpe.github.io">
-  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593757242279" alt="">
+  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593757709153" alt="">
   </a>
   <h1 class="site-title">
     twizmpe
@@ -80,7 +80,7 @@ EncodeUtils类包含
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              jeeSite4 Common包
+              jeeSite4 编解码
             </h2>
             <div class="post-info">
               <span>
@@ -100,8 +100,7 @@ EncodeUtils类包含
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="编解码包">编解码包</h2>
-<h3 id="主要工具类">主要工具类</h3>
+                <h3 id="主要工具类">主要工具类</h3>
 <ul>
 <li><code>EncodeUtils</code>类包含
 <ul>
@@ -229,7 +228,7 @@ DOM 型 XSS 跟前两种 XSS 的区别：DOM 型 XSS 攻击中，取出和执行
 </li>
 </ul>
 </li>
-<li>实际的解决方法
+<li>包中解决方法
 <ul>
 <li>1.使用<code>org.apache.commons.text.StringEscapeUtils</code>工具类对<code>xml</code>以及<code>HTML</code>进行转义编解码，对特殊字符如&lt;&gt;&quot; ' &amp; 转义。</li>
 <li>2.使用设计的<code>xssFilter</code>过滤关键词。</li>
@@ -243,7 +242,7 @@ DOM 型 XSS 跟前两种 XSS 的区别：DOM 型 XSS 攻击中，取出和执行
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%BC%96%E8%A7%A3%E7%A0%81%E5%8C%85">编解码包</a>
+<li>
 <ul>
 <li><a href="#%E4%B8%BB%E8%A6%81%E5%B7%A5%E5%85%B7%E7%B1%BB">主要工具类</a>
 <ul>

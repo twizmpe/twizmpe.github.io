@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twizmpe.github.io</id>
     <title>twizmpe</title>
-    <updated>2020-07-03T06:20:45.827Z</updated>
+    <updated>2020-07-03T06:28:32.433Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twizmpe.github.io"/>
     <link rel="self" href="https://twizmpe.github.io/atom.xml"/>
@@ -11,13 +11,12 @@
     <icon>https://twizmpe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, twizmpe</rights>
     <entry>
-        <title type="html"><![CDATA[jeeSite4 Common包]]></title>
+        <title type="html"><![CDATA[jeeSite4 编解码]]></title>
         <id>https://twizmpe.github.io/post/jeesite4-common/</id>
         <link href="https://twizmpe.github.io/post/jeesite4-common/">
         </link>
         <updated>2020-07-02T09:51:59.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="编解码包">编解码包</h2>
-<h3 id="主要工具类">主要工具类</h3>
+        <content type="html"><![CDATA[<h3 id="主要工具类">主要工具类</h3>
 <ul>
 <li><code>EncodeUtils</code>类包含
 <ul>
@@ -145,7 +144,7 @@ DOM 型 XSS 跟前两种 XSS 的区别：DOM 型 XSS 攻击中，取出和执行
 </li>
 </ul>
 </li>
-<li>实际的解决方法
+<li>包中解决方法
 <ul>
 <li>1.使用<code>org.apache.commons.text.StringEscapeUtils</code>工具类对<code>xml</code>以及<code>HTML</code>进行转义编解码，对特殊字符如&lt;&gt;&quot; ' &amp; 转义。</li>
 <li>2.使用设计的<code>xssFilter</code>过滤关键词。</li>
