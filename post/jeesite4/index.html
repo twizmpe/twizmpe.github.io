@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>JeeSite4 随笔 | twizmpe</title>
-<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593856351515">
+<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593857436589">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="JeeSite4 随笔 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
@@ -31,7 +31,7 @@ Beanuti..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://twizmpe.github.io">
-  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593856351515" alt="">
+  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593857436589" alt="">
   </a>
   <h1 class="site-title">
     twizmpe
@@ -89,7 +89,7 @@ Beanuti..." />
                 2020-07-03
               </span>
               <span>
-                2 min read
+                3 min read
               </span>
               
                 <a href="https://twizmpe.github.io/tag/n2l7XxIuj/" class="post-tag">
@@ -114,8 +114,16 @@ Beanuti..." />
 </ul>
 <h4 id="beanutils">Beanutils</h4>
 <ul>
-<li><code>Apache Commons</code>包下的<code>Beanutils</code>是基于JDK的<code>java.beans</code>包实现。<code>Beanutils</code>按照javaBean的设计准则进行实现。</li>
+<li><code>Apache Commons</code>包下的<code>Beanutils</code>是基于JDK的<code>java.beans</code>包实现。<code>Beanutils</code>按照javaBean的设计准则进行实现。使用java的反射实现。</li>
+<li>常用方法</li>
 </ul>
+<pre><code class="language-java">// 把map里面的值放入bean中
+public void populate (Object bean, Map map)
+//复制
+public static Object cloneBean(Object bean) {}
+//把Bean的属性值放入到一个Map里面
+public static Map&lt;String, String&gt; describe(Object bean){}
+</code></pre>
 <h4 id="propertyutils">Propertyutils</h4>
 <ul>
 <li><code>Beanutils</code>下的<code>PropertyUtils</code>能够通过<code>get</code>、<code>set</code>方法进行访问。<a href="http://commons.apache.org/proper/commons-beanutils/javadocs/v1.9.3/apidocs/overview-summary.html">doc文档</a>
