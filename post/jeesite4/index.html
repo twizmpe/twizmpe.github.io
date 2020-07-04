@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>JeeSite4 随笔 | twizmpe</title>
-<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593779564106">
+<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593836134235">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="JeeSite4 随笔 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
@@ -11,11 +11,10 @@
 
 
 
-    <meta name="description" content="@SuppressWarnings(&quot;rawtypes&quot;)
+    <meta name="description" content="Apache Commons Beanutils  Propertyutils
+Beanutils
 
-传参时也要传递带泛型的参数警告去除
-
-" />
+Apache Commons包下的Beanutils是基于JDK的java.beans包实现。Beanutils按照javaBean的设计..." />
     <meta name="keywords" content="项目学习" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -25,7 +24,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://twizmpe.github.io">
-  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593779564106" alt="">
+  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593836134235" alt="">
   </a>
   <h1 class="site-title">
     twizmpe
@@ -96,9 +95,67 @@
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h3 id="suppresswarningsrawtypes">@SuppressWarnings(&quot;rawtypes&quot;)</h3>
+                <h3 id="apache-commons-beanutils-propertyutils">Apache Commons Beanutils  Propertyutils</h3>
+<h4 id="beanutils">Beanutils</h4>
 <ul>
-<li>传参时也要传递带泛型的参数警告去除</li>
+<li><code>Apache Commons</code>包下的<code>Beanutils</code>是基于JDK的<code>java.beans</code>包实现。<code>Beanutils</code>按照javaBean的设计准则进行实现。
+<ul>
+<li>
+<ol>
+<li>必须提供无参构造器</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>类中属性必须私有化（private）</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>类中提供公共的getter和setter方法<br>
+####Propertyutils</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><code>Beanutils</code>下的<code>PropertyUtils</code>能够通过<code>get</code>、<code>set</code>方法进行访问。<a href="http://commons.apache.org/proper/commons-beanutils/javadocs/v1.9.3/apidocs/overview-summary.html">doc文档</a>
+<ul>
+<li>基本数据类型：
+<ul>
+<li>PropertyUtils.getSimpleProperty(Object, String)</li>
+<li>PropertyUtils.setSimpleProperty(Object, String, Object)</li>
+</ul>
+</li>
+<li>集合list、数组类型
+<ul>
+<li>PropertyUtils.getIndexedProperty(Object, String)</li>
+<li>PropertyUtils.getIndexedProperty(Object, String, int)</li>
+<li>PropertyUtils.setIndexedProperty(Object, String, Object)</li>
+<li>PropertyUtils.setIndexedProperty(Object, String, int, Object)</li>
+</ul>
+</li>
+<li>Map映射类型
+<ul>
+<li>PropertyUtils.getMappedProperty(Object, String)</li>
+<li>PropertyUtils.getMappedProperty(Object, String, String)</li>
+<li>PropertyUtils.setMappedProperty(Object, String, Object)</li>
+<li>PropertyUtils.setMappedProperty(Object, String, String, Object)</li>
+</ul>
+</li>
+<li>嵌套类型
+<ul>
+<li>PropertyUtils.getNestedProperty(Object, String)</li>
+<li>PropertyUtils.setNestedProperty(Object, String, Object)</li>
+</ul>
+</li>
+<li>通用方法
+<ul>
+<li>PropertyUtils.getProperty(Object, String)</li>
+<li>PropertyUtils.setProperty(Object, String, Object)</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
               </div>
@@ -108,7 +165,11 @@
 <ul>
 <li>
 <ul>
-<li><a href="#suppresswarningsrawtypes">@SuppressWarnings(&quot;rawtypes&quot;)</a></li>
+<li><a href="#apache-commons-beanutils-propertyutils">Apache Commons Beanutils  Propertyutils</a>
+<ul>
+<li><a href="#beanutils">Beanutils</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
