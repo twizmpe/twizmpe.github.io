@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twizmpe.github.io</id>
     <title>twizmpe</title>
-    <updated>2020-07-04T07:47:23.364Z</updated>
+    <updated>2020-07-04T09:47:58.027Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twizmpe.github.io"/>
     <link rel="self" href="https://twizmpe.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://twizmpe.github.io/images/avatar.png</logo>
     <icon>https://twizmpe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, twizmpe</rights>
+    <entry>
+        <title type="html"><![CDATA[reflection和type introspection]]></title>
+        <id>https://twizmpe.github.io/post/reflection-he-type-introspection/</id>
+        <link href="https://twizmpe.github.io/post/reflection-he-type-introspection/">
+        </link>
+        <updated>2020-07-04T09:43:04.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>内省(type introspection)<sup><a href="https://zh.wikipedia.org/wiki/%E5%86%85%E7%9C%81_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)">[1]</a></sup>是指计算机程序在运行时（Run time）检查对象（Object）类型的一种能力，通常也可以称作运行时类型检查。一些编程语言如C++、Java、Ruby、PHP、Objective-C、Perl等等具有这种特性。</li>
+<li>反射机制<sup><a href="https://zh.wikipedia.org/wiki/%E5%8F%8D%E5%B0%84_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)">[2]</a></sup>不仅包括要能在运行时对程序自身信息进行检测，还要求程序能进一步根据这些信息改变程序状态或结构。</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[JAVA学习]]></title>
         <id>https://twizmpe.github.io/post/java-xue-xi/</id>
