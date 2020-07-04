@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>JeeSite4 随笔 | twizmpe</title>
-<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593848191517">
+<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593848839588">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="JeeSite4 随笔 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
@@ -24,7 +24,7 @@ Apache Commons包下的Beanutils是基于JDK的java.beans包实现。Beanutils�
       <div class="main-content">
         <div class="site-header">
   <a href="https://twizmpe.github.io">
-  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593848191517" alt="">
+  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593848839588" alt="">
   </a>
   <h1 class="site-title">
     twizmpe
@@ -82,7 +82,7 @@ Apache Commons包下的Beanutils是基于JDK的java.beans包实现。Beanutils�
                 2020-07-03
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
                 <a href="https://twizmpe.github.io/tag/n2l7XxIuj/" class="post-tag">
@@ -140,10 +140,45 @@ Apache Commons包下的Beanutils是基于JDK的java.beans包实现。Beanutils�
 <li>通用方法
 <ul>
 <li>PropertyUtils.getProperty(Object, String)</li>
-<li>PropertyUtils.setProperty(Object, String, Object)</li>
+<li>PropertyUtils.setProperty(Object, String, Object)<br>
+####排序</li>
 </ul>
 </li>
 </ul>
+<pre><code class="language-java">/**
+  * 本地列表排序
+  * @param list 需要排序的列表
+  * @param orderBy 排序的键值（如：id desc）
+  * @author ThinkGem
+  */
+  public static &lt;T&gt; List&lt;T&gt; listOrderBy(List&lt;T&gt; list, String orderBy){
+      if (list != null &amp;&amp; StringUtils.isNotBlank(orderBy)){
+          final String[] ss = orderBy.trim().split(&quot; &quot;);
+          if (ss != null){
+              final String t = ss.length==2 ? ss[1] : &quot;asc&quot;;
+              Collections.sort(list, new Comparator&lt;T&gt;() {
+                  @Override
+                  public int compare(T o1, T o2) {
+                      String s1 = StringUtils.EMPTY, s2 = StringUtils.EMPTY;
+                      if (o1 instanceof Map){
+                          s1 = ObjectUtils.toString(((Map)o1).get(ss[0]));
+                          s2 = ObjectUtils.toString(((Map)o2).get(ss[0]));
+                      }else{
+                          s1 = ObjectUtils.toString(ReflectUtils.invokeGetter(o1, ss[0]));
+                          s2 = ObjectUtils.toString(ReflectUtils.invokeGetter(o2, ss[0]));
+                      }
+                      if (&quot;asc&quot;.equalsIgnoreCase(t)){
+                          return s1.compareTo(s2);
+                      }else{
+                          return s2.compareTo(s1);
+                      }
+                  }
+              });
+          }
+      }
+      return list;
+  }
+</code></pre>
 </li>
 </ul>
 
