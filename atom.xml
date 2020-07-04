@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twizmpe.github.io</id>
     <title>twizmpe</title>
-    <updated>2020-07-04T10:10:39.111Z</updated>
+    <updated>2020-07-04T10:14:38.621Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twizmpe.github.io"/>
     <link rel="self" href="https://twizmpe.github.io/atom.xml"/>
@@ -125,11 +125,13 @@ public static Map&lt;String, String&gt; describe(Object bean){}
 <li>通用方法
 <ul>
 <li>PropertyUtils.getProperty(Object, String)</li>
-<li>PropertyUtils.setProperty(Object, String, Object)<br>
-####排序</li>
+<li>PropertyUtils.setProperty(Object, String, Object)</li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+<h4 id="排序">排序</h4>
 <pre><code class="language-java">/**
   * 本地列表排序
   * @param list 需要排序的列表
@@ -164,8 +166,6 @@ public static Map&lt;String, String&gt; describe(Object bean){}
       return list;
   }
 </code></pre>
-</li>
-</ul>
 ]]></content>
     </entry>
     <entry>
