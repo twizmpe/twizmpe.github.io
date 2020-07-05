@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>唯一性ID生成策略 | twizmpe</title>
-<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593937497949">
+<link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593938193722">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="唯一性ID生成策略 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
@@ -31,7 +31,7 @@ UUID(Universally Unique Identifier)的标准型..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://twizmpe.github.io">
-  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593937497949" alt="">
+  <img class="avatar" src="https://twizmpe.github.io/images/avatar.png?v=1593938193722" alt="">
   </a>
   <h1 class="site-title">
     twizmpe
@@ -139,6 +139,18 @@ UUID(Universally Unique Identifier)的标准型..." />
 </li>
 </ul>
 <h3 id="twitter的snowflake算法">Twitter的snowflake算法</h3>
+<ul>
+<li>64位长度编码长度
+<ul>
+<li>1位符号位</li>
+<li>41位时间戳（毫秒级）</li>
+<li>10位数据机器位</li>
+<li>12位毫秒内的序列</li>
+</ul>
+</li>
+<li>优点：高性能，低延迟，按时间有序，一般不会造成ID碰撞</li>
+<li>缺点：需要独立的开发和部署，依赖于机器的时钟</li>
+</ul>
 
               </div>
               <div class="toc-container">

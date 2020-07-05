@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twizmpe.github.io</id>
     <title>twizmpe</title>
-    <updated>2020-07-05T08:25:01.213Z</updated>
+    <updated>2020-07-05T08:36:38.657Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twizmpe.github.io"/>
     <link rel="self" href="https://twizmpe.github.io/atom.xml"/>
@@ -59,6 +59,18 @@
 </li>
 </ul>
 <h3 id="twitter的snowflake算法">Twitter的snowflake算法</h3>
+<ul>
+<li>64位长度编码长度
+<ul>
+<li>1位符号位</li>
+<li>41位时间戳（毫秒级）</li>
+<li>10位数据机器位</li>
+<li>12位毫秒内的序列</li>
+</ul>
+</li>
+<li>优点：高性能，低延迟，按时间有序，一般不会造成ID碰撞</li>
+<li>缺点：需要独立的开发和部署，依赖于机器的时钟</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
