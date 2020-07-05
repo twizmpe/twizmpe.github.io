@@ -2,19 +2,20 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>JAVA学习 | twizmpe</title>
+<title>MyBatis框架 | twizmpe</title>
 <link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593949710554">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="JAVA学习 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="MyBatis框架 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="泛型
-
-即‘参数化类型’，java虚拟机在编译阶段进行去泛型化，在编译过程中，正确检验泛型结果后，会将泛型的相关信息擦出，并且在对象进入和离开方法的边界处添加类型检查和类型转换的方法。因此只要在编译时期不存在类型转换问题，那么运行时期就不会..." />
-    <meta name="keywords" content="基础知识" />
+    <meta name="description" content="MyBatis原理
+转载：编程技术进阶
+MyBatis实现
+..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -74,68 +75,32 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              JAVA学习
+              MyBatis框架
             </h2>
             <div class="post-info">
               <span>
-                2020-07-03
+                2020-07-05
               </span>
               <span>
                 1 min read
               </span>
               
-                <a href="https://twizmpe.github.io/tag/oi7YLG4G5/" class="post-tag">
-                  # 基础知识
-                </a>
-              
             </div>
-            
-              <img class="post-feature-image" src="https://twizmpe.github.io/post-images/java-xue-xi.jpg" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="泛型">泛型</h2>
-<ul>
-<li>即‘参数化类型’，java虚拟机在编译阶段进行去泛型化，在编译过程中，正确检验泛型结果后，会将泛型的相关信息擦出，并且在对象进入和离开方法的边界处添加类型检查和类型转换的方法。因此只要在编译时期不存在类型转换问题，那么运行时期就不会抛出ClassCastException异常。</li>
-<li>泛型包含知识点
-<ul>
-<li>泛型类</li>
-<li>泛型方法</li>
-<li>类型通配符<code>?</code>
-<ul>
-<li>能调对象与类型无关的方法，不能调用对象与类型有关的方法。</li>
-<li>设置通配符上限<code>&lt;? extends T&gt;</code>、设置通配符下限<code>&lt;? super T&gt;</code>。</li>
-<li>上下限原则PECS(Producer Extends Consumer Super)
-<ul>
-<li>泛型读取<code>&lt;? extends T&gt;</code>--------&gt;Producer Extends</li>
-<li>泛型写入<code>&lt;? super T&gt;</code>--------&gt;Consumer Super</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>泛型擦除
-<ul>
-<li>java虚拟机在编译阶段进行去泛型化。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="注解">注解</h2>
-<h3 id="suppresswarningsrawtypes">@SuppressWarnings(&quot;rawtypes&quot;)</h3>
-<ul>
-<li>传参时也要传递带泛型的参数警告去除</li>
-</ul>
+                <h3 id="mybatis原理">MyBatis原理</h3>
+<p>转载：编程技术进阶<br>
+<a href="https://mp.weixin.qq.com/s/7qk8CY4FahXQBAiBmYep8g">MyBatis实现</a></p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%B3%9B%E5%9E%8B">泛型</a></li>
-<li><a href="#%E6%B3%A8%E8%A7%A3">注解</a>
+<li>
 <ul>
-<li><a href="#suppresswarningsrawtypes">@SuppressWarnings(&quot;rawtypes&quot;)</a></li>
+<li><a href="#mybatis%E5%8E%9F%E7%90%86">MyBatis原理</a></li>
 </ul>
 </li>
 </ul>
@@ -150,9 +115,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://twizmpe.github.io/post/jeesite4/">
+            <a href="https://twizmpe.github.io/post/wei-yi-xing-id-sheng-cheng-ce-lue/">
               <h3 class="post-title">
-                JeeSite4 随笔
+                唯一性ID生成策略
               </h3>
             </a>
           </div>
