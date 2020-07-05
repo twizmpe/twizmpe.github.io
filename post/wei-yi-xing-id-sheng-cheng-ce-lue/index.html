@@ -2,19 +2,27 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>JAVA学习 | twizmpe</title>
+<title>唯一性ID生成策略 | twizmpe</title>
 <link rel="shortcut icon" href="https://twizmpe.github.io/favicon.ico?v=1593937497949">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://twizmpe.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="JAVA学习 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="唯一性ID生成策略 | twizmpe - Atom Feed" href="https://twizmpe.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="泛型
+    <meta name="description" content="唯一性ID要求
 
-即‘参数化类型’，java虚拟机在编译阶段进行去泛型化，在编译过程中，正确检验泛型结果后，会将泛型的相关信息擦出，并且在对象进入和离开方法的边界处添加类型检查和类型转换的方法。因此只要在编译时期不存在类型转换问题，那么运行时期就不会..." />
-    <meta name="keywords" content="基础知识" />
+唯一性
+有序递增性：对某业务或用户按照一定数据有序递增
+高可用性：任何时候都能生成正确的ID
+包含事件信息
+
+UUID
+参考美团技术团队掘金
+
+UUID(Universally Unique Identifier)的标准型..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -74,68 +82,76 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              JAVA学习
+              唯一性ID生成策略
             </h2>
             <div class="post-info">
               <span>
-                2020-07-03
+                2020-07-05
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
-              
-                <a href="https://twizmpe.github.io/tag/oi7YLG4G5/" class="post-tag">
-                  # 基础知识
-                </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://twizmpe.github.io/post-images/java-xue-xi.jpg" alt="">
-            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="泛型">泛型</h2>
+                <h3 id="唯一性id要求">唯一性ID要求</h3>
 <ul>
-<li>即‘参数化类型’，java虚拟机在编译阶段进行去泛型化，在编译过程中，正确检验泛型结果后，会将泛型的相关信息擦出，并且在对象进入和离开方法的边界处添加类型检查和类型转换的方法。因此只要在编译时期不存在类型转换问题，那么运行时期就不会抛出ClassCastException异常。</li>
-<li>泛型包含知识点
+<li>唯一性</li>
+<li>有序递增性：对某业务或用户按照一定数据有序递增</li>
+<li>高可用性：任何时候都能生成正确的ID</li>
+<li>包含事件信息</li>
+</ul>
+<h3 id="uuid">UUID</h3>
+<p>参考<a href="https://tech.meituan.com/2017/04/21/mt-leaf.html">美团技术团队</a><a href="https://juejin.im/post/5b3a23746fb9a024e15cad79">掘金</a></p>
 <ul>
-<li>泛型类</li>
-<li>泛型方法</li>
-<li>类型通配符<code>?</code>
+<li>UUID(Universally Unique Identifier)的标准型式包含32个16进制数字，以连字号分为五段，形式为8-4-4-4-12的36个字符，示例：550e8400-e29b-41d4-a716-446655440000，到目前为止业界一共有5种方式生成UUID，详情见IETF发布的<a href="https://www.ietf.org/rfc/rfc4122.txt">UUID规范 </a>
 <ul>
-<li>能调对象与类型无关的方法，不能调用对象与类型有关的方法。</li>
-<li>设置通配符上限<code>&lt;? extends T&gt;</code>、设置通配符下限<code>&lt;? super T&gt;</code>。</li>
-<li>上下限原则PECS(Producer Extends Consumer Super)
-<ul>
-<li>泛型读取<code>&lt;? extends T&gt;</code>--------&gt;Producer Extends</li>
-<li>泛型写入<code>&lt;? super T&gt;</code>--------&gt;Consumer Super</li>
+<li>优点：本地生成，生成简单，性能好，没有高可用风险</li>
+<li>缺点：长度过长，存储冗余，且无序不可读，查询效率低</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>泛型擦除
+<h3 id="数据库自增">数据库自增</h3>
 <ul>
-<li>java虚拟机在编译阶段进行去泛型化。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="注解">注解</h2>
-<h3 id="suppresswarningsrawtypes">@SuppressWarnings(&quot;rawtypes&quot;)</h3>
+<li>由数据库提供支持
 <ul>
-<li>传参时也要传递带泛型的参数警告去除</li>
+<li>优点：id 之间的步长是固定且可自定义的，简单，唯一性，自增性</li>
+<li>缺点：可用性低，扩展差，性能瓶颈，</li>
 </ul>
+</li>
+<li>改进——批量生成ID
+<ul>
+<li>一次按需批量生成多个ID，每次生成都需要访问数据库，将数据库修改为最大的ID值，并在内存中记录当前值及最大值。</li>
+<li>优点：避免了每次生成ID都要访问数据库并带来压力，提高性能</li>
+<li>缺点：属于本地生成策略，存在单点故障，服务重启造成ID不连续</li>
+</ul>
+</li>
+</ul>
+<h3 id="redis生成id">Redis生成ID</h3>
+<ul>
+<li>原理：Redis的所有命令操作都是单线程的，本身提供像 incr 和 increby 这样的自增原子命令，所以能保证生成的 ID 肯定是唯一有序的。
+<ul>
+<li>优点：不依赖于数据库，灵活方便，且性能优于数据库；数字ID天然排序，对分页或者需要排序的结果很有帮助。</li>
+<li>缺点：如果系统中没有Redis，还需要引入新的组件，增加系统复杂度；需要编码和配置的工作量比较大。</li>
+</ul>
+</li>
+</ul>
+<h3 id="twitter的snowflake算法">Twitter的snowflake算法</h3>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%B3%9B%E5%9E%8B">泛型</a></li>
-<li><a href="#%E6%B3%A8%E8%A7%A3">注解</a>
+<li>
 <ul>
-<li><a href="#suppresswarningsrawtypes">@SuppressWarnings(&quot;rawtypes&quot;)</a></li>
+<li><a href="#%E5%94%AF%E4%B8%80%E6%80%A7id%E8%A6%81%E6%B1%82">唯一性ID要求</a></li>
+<li><a href="#uuid">UUID</a></li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%A2%9E">数据库自增</a></li>
+<li><a href="#redis%E7%94%9F%E6%88%90id">Redis生成ID</a></li>
+<li><a href="#twitter%E7%9A%84snowflake%E7%AE%97%E6%B3%95">Twitter的snowflake算法</a></li>
 </ul>
 </li>
 </ul>
@@ -150,9 +166,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://twizmpe.github.io/post/jeesite4/">
+            <a href="https://twizmpe.github.io/post/zheng-ze-biao-da-shi/">
               <h3 class="post-title">
-                JeeSite4 随笔
+                正则表达式
               </h3>
             </a>
           </div>
