@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://twizmpe.github.io</id>
     <title>twizmpe</title>
-    <updated>2020-07-05T08:36:38.657Z</updated>
+    <updated>2020-07-05T09:16:44.081Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://twizmpe.github.io"/>
     <link rel="self" href="https://twizmpe.github.io/atom.xml"/>
@@ -368,6 +368,14 @@ public static Map&lt;String, String&gt; describe(Object bean){}
       return list;
   }
 </code></pre>
+<h4 id="netcoobirdthumbnailatorthumbnails">net.coobird.thumbnailator.Thumbnails</h4>
+<ul>
+<li>该包为生成图像缩略图、裁切、旋转、添加水印等操作的 Java 类库。</li>
+</ul>
+<h4 id="comgooglezxing">com.google.zxing</h4>
+<ul>
+<li>操作二维码的工具包，具体见<a href="https://blog.csdn.net/wangmx1993328/article/details/83856391">参考</a></li>
+</ul>
 ]]></content>
     </entry>
     <entry>
